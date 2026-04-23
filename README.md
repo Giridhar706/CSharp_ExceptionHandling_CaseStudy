@@ -1,79 +1,120 @@
 # CSharp_ExceptionHandling_CaseStudy
 
-📌 Problem Statement
+# 🏦 Banking System (C#)
 
-Design a simple banking system using C# that allows a user to:
+## 📌 Problem Statement
 
-Create a bank account with an initial balance
-Deposit money into the account
-Withdraw money while maintaining a minimum balance of ₹1000
-Check current account balance
-Handle invalid inputs and errors using exception handling
+Design a Banking System in C# that allows users to perform basic banking operations while handling errors using **custom exceptions**.
 
-The system should be interactive and menu-driven.
+The system should:
 
+* Deposit money
+* Withdraw money
+* Check balance
+* Handle invalid inputs and insufficient balance
 
-⚠️ Exception Types Used:
+---
 
-1. InvalidAmountException
+## ⚙️ Concepts Used
 
-     Thrown when the deposit amount is less than or equal to 0
-   
-     Defined in: InvalidAmountException
-   
-2. InsufficientBalanceException
-   
-     Thrown when:
-        Withdrawal amount exceeds balance
-        Withdrawal causes balance to go below ₹1000
-   
-     Defined in: InsufficientBalanceException
-   
-3. ArgumentException
-   
-     Thrown when user selects an invalid menu option
-   
-4. Generic Exception
-   
-     Handles any unexpected errors
+* Exception Handling (try-catch-finally)
+* Custom Exceptions
+* Classes & Objects
+* Encapsulation
+* User Input (Console)
 
-     Sample Output:
+---
 
-   <img width="1423" height="903" alt="image" src="https://github.com/user-attachments/assets/f6077387-8395-4990-8d93-bf25b836083d" />
-   
-   ▶️ How to Run the Code:
-   
-   Step 1: Open Project
-   
-      Open Visual Studio
-   
-      Click on Open Project/Solution
-   
-      Select your project file (BankingSystem.csproj)
-   
-  Step 2: Check Files
-  
-  Make sure these files exist:
-  
-    Program.cs 
-    BankAccount.cs 
-    InvalidAmountException.cs 
-    InsufficientBalanceException.cs 
-    
+## 📂 Project Structure
 
-Step 3: Build the Project
+* `BankAccount.cs` → Handles account operations 
+* `InvalidAmountException.cs` → Handles invalid deposit/amount errors 
+* `InsufficientBalanceException.cs` → Handles low balance errors 
+* `Program.cs` → Main execution logic with menu 
 
-   Click Build → Build Solution
-   
-   (or press Ctrl + Shift + B)
-   
-Step 4: Run the Project
+---
 
-   Click Start
-   (or press F5)
-   
-Step 5: Interact
+## 🔁 How It Works
 
-   Enter your name and balance
-   
-   Choose options from the menu
+1. User enters:
+
+   * Account holder name
+   * Initial balance
+
+2. Menu is displayed:
+
+   * Deposit
+   * Withdraw
+   * Check Balance
+   * Exit
+
+3. Based on user input:
+
+   * Deposit adds money
+   * Withdraw deducts money (with conditions)
+   * Balance is displayed
+
+4. Exceptions handled:
+
+   * Invalid amount
+   * Insufficient balance
+   * Invalid choice
+
+---
+
+## ▶️ How to Run
+
+1. Open project in **Visual Studio**
+2. Build the solution
+3. Run the program
+4. Enter inputs as asked
+
+---
+
+## 💻 Sample Output
+
+```id="u1z8qk"
+Enter account holder name: Giridhar
+Enter initial balance: 5000
+
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Choose option: 2
+Enter amount: 4500
+Error: Minimum ₹1000 balance required!
+Transaction done.
+
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Choose option: 3
+Current Balance: ₹5000
+Transaction done.
+```
+
+---
+
+## ⚠️ Exception Types Used
+
+* `InvalidAmountException` → When amount ≤ 0
+* `InsufficientBalanceException` → When balance is too low
+* `ArgumentException` → Invalid menu choice
+* General `Exception` → Unexpected errors
+
+---
+
+## 🚀 Future Improvements
+
+* Add PIN authentication
+* Store data in file/database
+* Add multiple accounts
+* GUI-based application
+
+---
+
+## 📌 Author
+
+Giridhar Gopal
